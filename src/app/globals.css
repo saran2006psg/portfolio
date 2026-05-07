@@ -217,4 +217,14 @@
   .mask-fade-edges {
     mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
   }
+
+  /* Hide watermarks and analytics badges */
+  [data-testid="analytics-badge"],
+  .veo-watermark,
+  .vercel-badge,
+  iframe[src*="analytics"],
+  iframe[src*="badge"],
+  div[style*="position: fixed"][style*="bottom"][style*="right"] {
+    display: none !important;
+  }
 }
