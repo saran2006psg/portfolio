@@ -1,12 +1,16 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "saran-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website showcasing projects, skills, and experience",
+  "author": "Saran M",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "framer-motion": "^12.26.1",
@@ -24,5 +28,8 @@
     "eslint-config-next": "16.1.1",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }
