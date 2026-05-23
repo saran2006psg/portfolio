@@ -32,19 +32,19 @@ const contactInfo = [
 
 export default function Contact() {
     return (
-        <section className="relative w-full bg-black py-32 px-4 md:px-10 overflow-hidden" id="contact">
+        <section className="relative w-full bg-black py-24 px-4 md:px-10 overflow-hidden" id="contact">
             {/* Background Elements */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#29abe2]/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen" />
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen" />
 
-            <div className="max-w-5xl mx-auto relative z-10">
+            <div className="max-w-4xl mx-auto relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-20"
+                    className="text-center mb-12"
                 >
-                    <h2 className="text-5xl md:text-7xl font-display font-light text-white mb-4">Get in Touch</h2>
+                    <h2 className="text-4xl md:text-6xl font-display font-light text-white mb-4">Get in Touch</h2>
                     <p className="font-mono text-[#999999] text-lg">Let's collaborate on something amazing</p>
                 </motion.div>
 
@@ -60,7 +60,7 @@ export default function Contact() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             whileHover={{ scale: 1.02 }}
-                            className="group p-8 rounded-[24px] bg-[#141414] border border-[#262626] hover:border-[#29abe2]/50 transition-all duration-300"
+                            className="group p-6 rounded-[24px] bg-[#141414] border border-[#262626] hover:border-[#29abe2]/50 transition-all duration-300"
                         >
                             <div className="flex items-start gap-4">
                                 <div className="text-4xl">{item.icon}</div>
@@ -88,7 +88,7 @@ export default function Contact() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.4 }}
-                    className="mt-20 flex justify-center"
+                    className="mt-12 flex justify-center"
                 >
                     <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-[#29abe2]/30 bg-[#29abe2]/5">
                         <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />

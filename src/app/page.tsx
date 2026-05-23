@@ -1,7 +1,7 @@
 import ScrollyCanvas from "@/components/ScrollyCanvas";
 import Projects from "@/components/Projects";
 import Navbar from "@/components/Navbar";
-import Education from "@/components/Education";
+import Experience from "@/components/Experience";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 
@@ -11,8 +11,8 @@ export default function Home() {
       <Navbar />
       <ScrollyCanvas numFrames={120} />
       <About />
+      <Experience />
       <Projects />
-      <Education />
       <Contact />
     </main>
   );

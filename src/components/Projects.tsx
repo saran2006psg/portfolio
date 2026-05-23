@@ -56,19 +56,6 @@ const projects = [
         ],
         tech: ["Arduino", "Embedded C", "ML", "IoT"],
         link: "#"
-    },
-    {
-        title: "Technical Event Coordinator",
-        category: "Leadership & Organization",
-        description: "Organized and managed 3+ technical events with focus on student engagement and knowledge sharing.",
-        highlights: [
-            "Event coordination and logistics management",
-            "Student engagement and community building",
-            "Technical workshop facilitation",
-            "Cross-functional team collaboration"
-        ],
-        tech: ["Leadership", "Event Mgmt", "Community"],
-        link: "#"
     }
 ];
 
@@ -118,7 +105,7 @@ export default function Projects() {
                                 <p className="text-[#999999] font-mono text-sm leading-[1.6] mb-6">
                                     {project.description}
                                 </p>
-                                
+
                                 {/* Highlights */}
                                 <ul className="space-y-2 mb-6 flex-grow">
                                     {project.highlights.map((highlight, i) => (
@@ -128,7 +115,7 @@ export default function Projects() {
                                         </li>
                                     ))}
                                 </ul>
-                                
+
                                 {/* Tech Tags */}
                                 <div className="flex flex-wrap gap-2">
                                     {project.tech.map((tag, i) => (
