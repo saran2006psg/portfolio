@@ -16,7 +16,7 @@ type LogoLoopProps = {
     fadeOut?: boolean;
     fadeOutColor?: string;
     scaleOnHover?: boolean;
-    renderItem?: (item: unknown, key: string | number) => React.ReactNode;
+    renderItem?: (item: { node: React.ReactNode; title: string }, key: string | number) => React.ReactNode;
     ariaLabel?: string;
     className?: string;
     style?: React.CSSProperties;
