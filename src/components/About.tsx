@@ -40,6 +40,7 @@ export default function About() {
 
     return (
         <section
+            id="about"
             ref={containerRef}
             className="relative w-full min-h-screen bg-background py-32 px-4 md:px-10 overflow-hidden flex items-center justify-center perspective-1000"
         >

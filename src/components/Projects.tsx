@@ -61,7 +61,7 @@ const projects = [
 
 export default function Projects() {
     return (
-        <section className="relative z-10 w-full min-h-screen bg-background py-32 px-4 md:px-10 overflow-hidden">
+        <section id="projects" className="relative z-10 w-full min-h-screen bg-background py-32 px-4 md:px-10 overflow-hidden">
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
                     <motion.h2

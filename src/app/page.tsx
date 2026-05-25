@@ -11,8 +11,8 @@ export default function Home() {
       <Navbar />
       <ScrollyCanvas numFrames={120} />
       <About />
-      <Experience />
       <Projects />
+      <Experience />
       <Contact />
     </main>
   );
