@@ -58,7 +58,7 @@ const contactInfo = [
 
 export default function Contact() {
     return (
-        <section className="relative w-full bg-background py-32 px-6 md:px-12 lg:px-20 overflow-hidden" id="contact">
+        <section className="relative w-full bg-background pt-16 pb-24 px-6 md:px-12 lg:px-20 overflow-hidden" id="contact">
             {/* Notebook Separator Binding */}
             <div className="absolute top-0 left-0 w-full notebook-separator z-20" />
 
@@ -80,31 +80,10 @@ export default function Contact() {
 
             <div className="max-w-4xl mx-auto relative z-10">
                 
-                {/* Header */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="text-center mb-16 relative"
-                >
-                    <p className="font-mono text-xs text-accent uppercase tracking-widest mb-2">$ cat contact.info</p>
-                    <h2 className="text-4xl md:text-6xl font-display font-semibold text-foreground mb-4">Get in Touch</h2>
-                    <p className="font-sans text-foreground/75 text-base md:text-lg leading-relaxed max-w-md mx-auto">
-                        Let's collaborate on software solutions, telemetry modules, or core systems.
-                    </p>
 
-                    {/* Decorative Sketched Arrow */}
-                    <div className="absolute top-2 right-12 lg:flex flex-col items-center rotate-[12deg] hidden text-accent animate-doodle">
-                        <span className="font-handwritten text-base font-semibold select-none">drop a line!</span>
-                        <svg className="w-12 h-8" viewBox="0 0 100 50" fill="none" stroke="currentColor" strokeWidth="1.5">
-                            <path d="M10,5 Q45,35 80,10" />
-                            <path d="M68,8 L80,10 L75,22" />
-                        </svg>
-                    </div>
-                </motion.div>
 
                 {/* Minimalist Glassmorphic Icons in One Row */}
-                <div className="flex flex-wrap items-center justify-center gap-6 mt-12 mb-16">
+                <div className="flex flex-wrap items-center justify-center gap-6 mb-12">
                     {contactInfo.map((item, index) => (
                         <motion.a
                             key={index}
@@ -145,17 +124,12 @@ export default function Contact() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.4 }}
-                    className="flex flex-col items-center gap-6"
+                    className="flex flex-col items-center"
                 >
                     {/* Sketched outline badge */}
                     <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-border bg-card/60 backdrop-blur-md shadow-[3px_3px_0px_rgba(37,99,235,0.06)]">
                         <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
                         <span className="font-mono text-xs font-bold text-foreground/80 tracking-wide">AVAILABLE FOR COLLABORATIONS</span>
-                    </div>
-
-                    {/* Handwritten footnote sign-off */}
-                    <div className="font-handwritten text-2xl font-semibold text-accent-purple select-none tracking-wider animate-doodle rotate-[-1deg] mt-2">
-                        Let's build the future together! 🚀
                     </div>
                 </motion.div>
             </div>
