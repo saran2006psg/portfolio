@@ -5,6 +5,5 @@
   "env": {
     "NODE_ENV": "production"
   },
-  "framework": "nextjs",
-  "nodeVersion": "20.x"
+  "framework": "nextjs"
 }
