@@ -4,6 +4,26 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import LogoLoop from './LogoLoop';
 
+type LogoLoopProps = {
+    logos: Array<{ node: React.ReactNode; title: string }>;
+    speed?: number;
+    direction?: 'left' | 'right' | 'up' | 'down';
+    width?: number | string;
+    logoHeight?: number;
+    gap?: number;
+    pauseOnHover?: boolean;
+    hoverSpeed?: number;
+    fadeOut?: boolean;
+    fadeOutColor?: string;
+    scaleOnHover?: boolean;
+    renderItem?: (item: unknown, key: string | number) => React.ReactNode;
+    ariaLabel?: string;
+    className?: string;
+    style?: React.CSSProperties;
+};
+
+const TypedLogoLoop = LogoLoop as React.ComponentType<LogoLoopProps>;
+
 const techLogos = [
     { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg", title: "Python" },
     { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg", title: "TypeScript" },
@@ -80,7 +100,7 @@ export default function About() {
 
                         {/* Interactive Skills Loop */}
                         <div className="mt-12 h-16 relative w-[120%] -ml-[10%] mask-linear-fade">
-                            <LogoLoop
+                            <TypedLogoLoop
                                 logos={techLogos}
                                 speed={80}
                                 direction="left"
