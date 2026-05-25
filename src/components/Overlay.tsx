@@ -23,7 +23,7 @@ export default function Overlay({ scrollYProgress }: OverlayProps) {
     const x3 = useTransform(scrollYProgress, [0.50, 0.60], [50, 0]); // Slide in from right
 
     return (
-        <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 text-white font-sans">
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 text-foreground font-sans">
             {/* Section 1 */}
             <motion.div
                 style={{ opacity: opacity1, y: y1 }}

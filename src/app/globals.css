@@ -4,33 +4,33 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-background: #000000;
-  --color-foreground: #ffffff;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
 
-  --color-card: #141414;
-  --color-card-foreground: #ffffff;
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
 
-  --color-popover: #141414;
-  --color-popover-foreground: #ffffff;
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
 
-  --color-primary: #ffffff;
-  --color-primary-foreground: #000000;
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
 
-  --color-secondary: #1a1a1a;
-  --color-secondary-foreground: #999999;
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
 
-  --color-muted: #1a1a1a;
-  --color-muted-foreground: #999999;
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
 
-  --color-accent: #29abe2;
-  --color-accent-foreground: #ffffff;
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
 
-  --color-destructive: #ef4444;
-  --color-destructive-foreground: #fafafa;
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
 
-  --color-border: #262626;
-  --color-input: #262626;
-  --color-ring: #29abe2;
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 
   --color-chart-1: #29abe2;
   --color-chart-2: #042d2d;
@@ -94,7 +94,30 @@
   }
 
   :root {
-    --background: #000000;
+    --background: #fafafa;
+    --foreground: #0a0a0a;
+    --card: #ffffff;
+    --card-foreground: #0a0a0a;
+    --popover: #ffffff;
+    --popover-foreground: #0a0a0a;
+    --primary: #0a0a0a;
+    --primary-foreground: #ffffff;
+    --secondary: #f4f4f5;
+    --secondary-foreground: #71717a;
+    --muted: #f4f4f5;
+    --muted-foreground: #71717a;
+    --accent: #29abe2;
+    --accent-foreground: #ffffff;
+    --destructive: #ef4444;
+    --destructive-foreground: #fafafa;
+    --border: #e4e4e7;
+    --input: #e4e4e7;
+    --ring: #29abe2;
+    --radius: 1.5rem;
+  }
+
+  .dark {
+    --background: #050505;
     --foreground: #ffffff;
     --card: #141414;
     --card-foreground: #ffffff;
@@ -113,7 +136,6 @@
     --border: #262626;
     --input: #262626;
     --ring: #29abe2;
-    --radius: 1.5rem;
   }
 
   html {
@@ -143,6 +165,10 @@
     z-index: 9999;
   }
 
+  .dark body::before {
+    opacity: 0.05;
+  }
+
   body::after {
     content: "";
     position: fixed;
@@ -150,10 +176,16 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
-    background-size: 100% 4px, 3px 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.05) 50%);
+    background-size: 100% 4px;
     pointer-events: none;
     z-index: 9998;
+    opacity: 0.1;
+  }
+
+  .dark body::after {
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+    background-size: 100% 4px, 3px 100%;
     opacity: 0.3;
   }
 

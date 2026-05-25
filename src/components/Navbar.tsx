@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import ThemeToggle from './ThemeToggle';
 
 const navLinks = [
     { name: 'Home', href: '/' },
@@ -47,9 +48,12 @@ export default function Navbar() {
                 ))}
             </div>
 
-            {/* Mobile Menu Icon (Placeholder) */}
-            <div className="md:hidden pointer-events-auto">
-                <button className="text-white">Menu</button>
+            {/* Right Section */}
+            <div className="flex items-center gap-4 pointer-events-auto">
+                <ThemeToggle />
+                <div className="md:hidden">
+                    <button className="text-white mix-blend-difference">Menu</button>
+                </div>
             </div>
         </motion.nav>
     );

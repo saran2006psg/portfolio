@@ -61,7 +61,7 @@ const projects = [
 
 export default function Projects() {
     return (
-        <section className="relative z-10 w-full min-h-screen bg-black py-32 px-4 md:px-10 overflow-hidden">
+        <section className="relative z-10 w-full min-h-screen bg-background py-32 px-4 md:px-10 overflow-hidden">
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
                     <motion.h2
@@ -69,7 +69,7 @@ export default function Projects() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="text-6xl md:text-8xl font-display font-light text-white"
+                        className="text-6xl md:text-8xl font-display font-light text-foreground"
                     >
                         Projects
                     </motion.h2>
@@ -87,29 +87,29 @@ export default function Projects() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             whileHover={{ y: -5 }}
-                            className="group flex flex-col bg-[#141414] rounded-[24px] border border-[#262626] overflow-hidden hover:border-white/20 transition-colors duration-300"
+                            className="group flex flex-col bg-card rounded-[24px] border border-border overflow-hidden hover:border-black/20 dark:hover:border-white/20 transition-colors duration-300"
                         >
                             {/* Content Container */}
                             <div className="p-8 flex flex-col flex-grow">
                                 <div className="flex items-center justify-between mb-3">
                                     <span className="text-xs font-mono font-medium tracking-widest text-[#29abe2] uppercase">{project.category}</span>
-                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-6 h-6 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
+                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-6 h-6 rounded-full border border-black/10 dark:border-white/10 flex items-center justify-center group-hover:bg-black dark:group-hover:bg-white group-hover:text-white dark:group-hover:text-black transition-all">
                                         <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transform group-hover:rotate-45 transition-transform">
                                             <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                     </a>
                                 </div>
-                                <h3 className="text-3xl font-display font-medium mb-3 text-white">
+                                <h3 className="text-3xl font-display font-medium mb-3 text-foreground">
                                     {project.title}
                                 </h3>
-                                <p className="text-[#999999] font-mono text-sm leading-[1.6] mb-6">
+                                <p className="text-muted-foreground font-mono text-sm leading-[1.6] mb-6">
                                     {project.description}
                                 </p>
 
                                 {/* Highlights */}
                                 <ul className="space-y-2 mb-6 flex-grow">
                                     {project.highlights.map((highlight, i) => (
-                                        <li key={i} className="text-[#777] text-sm font-sans flex items-start gap-2">
+                                        <li key={i} className="text-muted-foreground text-sm font-sans flex items-start gap-2">
                                             <span className="text-[#29abe2] mt-1">▸</span>
                                             <span>{highlight}</span>
                                         </li>
@@ -119,7 +119,7 @@ export default function Projects() {
                                 {/* Tech Tags */}
                                 <div className="flex flex-wrap gap-2">
                                     {project.tech.map((tag, i) => (
-                                        <span key={i} className="text-xs font-mono px-2.5 py-1 rounded bg-white/5 text-white/70 border border-white/10">
+                                        <span key={i} className="text-xs font-mono px-2.5 py-1 rounded bg-black/5 dark:bg-white/5 text-black/70 dark:text-white/70 border border-black/10 dark:border-white/10">
                                             {tag}
                                         </span>
                                     ))}

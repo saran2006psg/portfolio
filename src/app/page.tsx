@@ -7,7 +7,7 @@ import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <main className="bg-background min-h-screen text-white">
+    <main className="bg-background min-h-screen text-foreground">
       <Navbar />
       <ScrollyCanvas numFrames={120} />
       <About />
