@@ -225,6 +225,75 @@
     user-select: none;
   }
 
+  .font-handwritten {
+    font-family: var(--font-handwritten), "Caveat", cursive;
+  }
+
+  .sketch-card {
+    background: rgba(255, 255, 255, 0.55); /* Translucent glass card for Light Mode */
+    backdrop-filter: blur(10px) saturate(130%);
+    -webkit-backdrop-filter: blur(10px) saturate(130%);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 3px 3px 0px rgba(37, 99, 235, 0.06); /* Thin ink shadow */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark .sketch-card {
+    background: rgba(31, 41, 55, 0.45); /* Translucent blackboard card for Dark Mode */
+    border-color: rgba(96, 165, 250, 0.2);
+    box-shadow: 3px 3px 0px rgba(96, 165, 250, 0.05);
+  }
+
+  .sketch-card:hover {
+    transform: translateY(-4px) rotate(0.5deg);
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 8px 8px 0px rgba(37, 99, 235, 0.15); /* Interactive pop shadow */
+    border-color: var(--accent);
+  }
+
+  .dark .sketch-card:hover {
+    background: rgba(31, 41, 55, 0.65);
+    border-color: var(--accent);
+    box-shadow: 8px 8px 0px rgba(96, 165, 250, 0.15);
+  }
+
+  .sketch-card-alt {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(10px) saturate(130%);
+    -webkit-backdrop-filter: blur(10px) saturate(130%);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 3px 3px 0px rgba(124, 58, 237, 0.06);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark .sketch-card-alt {
+    background: rgba(31, 41, 55, 0.45);
+    border-color: rgba(192, 132, 252, 0.2);
+    box-shadow: 3px 3px 0px rgba(192, 132, 252, 0.05);
+  }
+
+  .sketch-card-alt:hover {
+    transform: translateY(-4px) rotate(-0.5deg);
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 8px 8px 0px rgba(124, 58, 237, 0.15);
+    border-color: var(--accent-purple);
+  }
+
+  .dark .sketch-card-alt:hover {
+    background: rgba(31, 41, 55, 0.65);
+    border-color: var(--accent-purple);
+    box-shadow: 8px 8px 0px rgba(192, 132, 252, 0.15);
+  }
+
+  .doodle-svg {
+    opacity: 0.15;
+    color: var(--accent);
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
   .glass-card {
     background: rgba(20, 20, 20, 0.6);
     backdrop-filter: blur(12px);
