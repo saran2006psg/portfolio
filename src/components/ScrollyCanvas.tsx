@@ -51,7 +51,7 @@ export default function ScrollyCanvas({ numFrames = 120 }: ScrollyCanvasProps) {
         }
     }, [numFrames]);
 
-    // Render logic
+    // Render & Resize Sync logic
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas) return;
@@ -96,6 +96,27 @@ export default function ScrollyCanvas({ numFrames = 120 }: ScrollyCanvasProps) {
             ctx.drawImage(img, renderX, renderY, renderW, renderH);
         };
 
+        // Resize handler inside the same effect so it can call render()
+        const handleResize = () => {
+            const currentWidth = window.innerWidth;
+            const currentHeight = window.innerHeight;
+            const dpr = window.devicePixelRatio || 1;
+
+            // Set display size (CSS pixels)
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+
+            // Set backing store size (physical pixels)
+            canvas.width = currentWidth * dpr;
+            canvas.height = currentHeight * dpr;
+
+            // Force immediate synchronous redraw to prevent clear-flickering
+            render(scrollYProgress.get());
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Initial setup call
+
         // Sub to scroll
         let autoScrolled = false;
         const unsubscribe = scrollYProgress.on("change", (latest) => {
@@ -113,47 +134,15 @@ export default function ScrollyCanvas({ numFrames = 120 }: ScrollyCanvasProps) {
             }
         });
 
-        // Initial render call
-        render(scrollYProgress.get());
-
-        return () => unsubscribe();
-    }, [scrollYProgress, images, isLoaded]);
-
-    // Handle Resize
-    useEffect(() => {
-        let lastWidth = 0;
-
-        const handleResize = () => {
-            if (canvasRef.current) {
-                const currentWidth = window.innerWidth;
-                const currentHeight = window.innerHeight;
-
-                // Only resize backing store on width changes (ignore height changes from mobile address bars)
-                if (currentWidth !== lastWidth || !canvasRef.current.width) {
-                    const dpr = window.devicePixelRatio || 1;
-                    
-                    // Set display size (CSS pixels)
-                    canvasRef.current.style.width = '100%';
-                    canvasRef.current.style.height = '100%';
-                    
-                    // Set backing store size (physical pixels)
-                    canvasRef.current.width = currentWidth * dpr;
-                    canvasRef.current.height = currentHeight * dpr;
-                    
-                    lastWidth = currentWidth;
-                }
-            }
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            unsubscribe();
         };
-
-        window.addEventListener('resize', handleResize);
-        handleResize();
-
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    }, [scrollYProgress, images, isLoaded]);
 
     return (
         <div ref={containerRef} className="h-[500vh] relative z-0">
-            <div className="sticky top-0 left-0 w-full h-screen overflow-hidden">
+            <div className="sticky top-0 left-0 w-full h-[100dvh] overflow-hidden">
                 <canvas ref={canvasRef} className="w-full h-full block bg-background" />
             </div>
             <Overlay scrollYProgress={scrollYProgress} />
