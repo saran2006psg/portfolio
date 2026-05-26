@@ -205,7 +205,7 @@ export default function NoahPortfolio() {
   const [copied, setCopied] = useState(false);
   const [selectedJob, setSelectedJob] = useState<typeof experienceData[0] | null>(null);
   const [closing, setClosing] = useState(false);
-  
+
   const columnsOuterRef = useRef<HTMLDivElement>(null);
   const [activeDot, setActiveDot] = useState(0);
 
@@ -259,12 +259,12 @@ export default function NoahPortfolio() {
         <h1 className="site-title font-mono uppercase tracking-widest text-[#111] dark:text-[#f0f0f0] font-semibold">
           Saran M
         </h1>
-        
+
         {/* Navigation Arrows & Dark Mode */}
         <div className="nav-arrows">
-          <button 
-            className="nav-arrow" 
-            onClick={toggleTheme} 
+          <button
+            className="nav-arrow"
+            onClick={toggleTheme}
             aria-label="Toggle dark mode"
           >
             {theme === 'dark' ? (
@@ -287,20 +287,20 @@ export default function NoahPortfolio() {
               </svg>
             )}
           </button>
-          
-          <button 
-            className="nav-arrow" 
-            onClick={() => scrollColumns('left')} 
+
+          <button
+            className="nav-arrow"
+            onClick={() => scrollColumns('left')}
             aria-label="Previous column"
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <polyline points="15,18 9,12 15,6" />
             </svg>
           </button>
-          
-          <button 
-            className="nav-arrow" 
-            onClick={() => scrollColumns('right')} 
+
+          <button
+            className="nav-arrow"
+            onClick={() => scrollColumns('right')}
             aria-label="Next column"
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -311,26 +311,26 @@ export default function NoahPortfolio() {
       </header>
 
       {/* Columns Outer Container */}
-      <div 
-        ref={columnsOuterRef} 
+      <div
+        ref={columnsOuterRef}
         className="columns-outer"
         onScroll={handleScroll}
       >
         <div className="columns-inner">
-          
+
           {/* COLUMN 1: About me */}
           <div className="column">
             <div className="about-card card h-full">
               <div className="card-label">
                 <button className="col-tab" disabled>About me</button>
               </div>
-              
+
               <div className="about-scroll">
                 <div className="about-body">
                   <div className="about-photo-wrap">
-                    <img 
-                      src="/avatar.png" 
-                      alt="Saran M" 
+                    <img
+                      src="/projects/saran.jpeg"
+                      alt="Saran M"
                       className="about-photo"
                       onError={(e) => {
                         // Fallback in case of asset delay
@@ -338,7 +338,7 @@ export default function NoahPortfolio() {
                       }}
                     />
                   </div>
-                  
+
                   <h2 className="bio-heading text-black dark:text-[#f0f0f0]">
                     Hey, I'm Saran. A Computer Science Student & Developer.
                   </h2>
@@ -348,25 +348,25 @@ export default function NoahPortfolio() {
                   <p className="bio-para">
                     Currently studying Computer Science and Engineering, I actively participate in national hackathons and enjoy designing robust backend architectures, validation frameworks, and deep-learning threat detections.
                   </p>
-                  
+
                   {/* Social Buttons Row */}
                   <div className="social-row">
-                    <a 
-                      href="https://github.com/saran2006psg" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="social-btn social-icon-btn" 
+                    <a
+                      href="https://github.com/saran2006psg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="social-btn social-icon-btn"
                       aria-label="Visit GitHub Profile"
                     >
                       <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
                       </svg>
                     </a>
-                    <a 
-                      href="https://linkedin.com/in/saranpsg" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="social-btn social-icon-btn" 
+                    <a
+                      href="https://linkedin.com/in/saranpsg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="social-btn social-icon-btn"
                       aria-label="Visit LinkedIn Profile"
                     >
                       <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
@@ -375,8 +375,8 @@ export default function NoahPortfolio() {
                         <circle cx="4" cy="4" r="2" />
                       </svg>
                     </a>
-                    <button 
-                      onClick={handleCopyEmail} 
+                    <button
+                      onClick={handleCopyEmail}
                       className="social-btn font-mono"
                     >
                       {copied ? "Copied Email!" : "Copy email"}
@@ -392,12 +392,12 @@ export default function NoahPortfolio() {
                   </div>
                   <div className="meta-row">
                     <span className="meta-label">Focus</span>
-                    <span className="meta-val">Mobile Apps, Embedded IoT, AI Firewalls</span>
+                    <span className="meta-val">Backend, AI ,RAG, System Design</span>
                   </div>
                   <div className="meta-row">
                     <span className="meta-label">Stack</span>
                     <span className="meta-val font-mono text-[11px] leading-relaxed">
-                      Flutter, Python, TypeScript, React, Next.js, FastAPI, Node, Supabase, C++, Arduino
+                      Python, TypeScript,JavaScript, React, Next.js, FastAPI, Node, Supabase, PostgreSQL,Express
                     </span>
                   </div>
                   <div className="meta-row">
@@ -425,7 +425,7 @@ export default function NoahPortfolio() {
               {/* Scrollable Timeline content */}
               <div className={`tl-scroll ${selectedJob ? 'tl-scroll--shrunk' : ''}`}>
                 <div className="tl-inner" style={{ height: '620px' }}>
-                  
+
                   {/* Year lines and text labels */}
                   <div className="tl-year-line" style={{ top: '0px' }} />
                   <div className="tl-year-line" style={{ top: '120px' }} />
@@ -451,23 +451,23 @@ export default function NoahPortfolio() {
                   {/* Dynamic Job Cards absolute overlay */}
                   <div className="tl-cards">
                     {experienceData.map((job) => (
-                      <div 
-                        key={job.id} 
-                        onClick={() => setSelectedJob(job)} 
+                      <div
+                        key={job.id}
+                        onClick={() => setSelectedJob(job)}
                         className={`job-card ${job.id === 4 ? 'job-card--compact' : ''}`}
-                        style={{ 
-                          top: job.top, 
-                          height: job.height, 
-                          left: job.left, 
-                          width: job.width 
-                        }} 
-                        role="button" 
+                        style={{
+                          top: job.top,
+                          height: job.height,
+                          left: job.left,
+                          width: job.width
+                        }}
+                        role="button"
                         tabIndex={0}
                         onKeyDown={(e) => e.key === 'Enter' && setSelectedJob(job)}
                       >
-                        <img 
-                          src={job.logo} 
-                          alt={job.company} 
+                        <img
+                          src={job.logo}
+                          alt={job.company}
                           className="job-logo"
                           onError={(e) => {
                             e.currentTarget.style.display = 'none';
@@ -489,7 +489,7 @@ export default function NoahPortfolio() {
               <AnimatePresence>
                 {selectedJob && (
                   <div className="job-modal-overlay">
-                    <motion.div 
+                    <motion.div
                       className={`job-modal ${closing ? 'job-modal--closing' : ''}`}
                       initial={{ y: "100%" }}
                       animate={{ y: 0 }}
@@ -502,9 +502,9 @@ export default function NoahPortfolio() {
                       {/* Modal Body */}
                       <div className="job-modal-body">
                         <div className="flex items-center gap-3">
-                          <img 
-                            src={selectedJob.logo} 
-                            alt={selectedJob.company} 
+                          <img
+                            src={selectedJob.logo}
+                            alt={selectedJob.company}
                             className="job-modal-logo"
                             onError={(e) => {
                               e.currentTarget.style.display = 'none';
@@ -529,8 +529,8 @@ export default function NoahPortfolio() {
                           </h4>
                           <div className="flex flex-wrap gap-1.5">
                             {selectedJob.techStack.map((tech, i) => (
-                              <span 
-                                key={i} 
+                              <span
+                                key={i}
                                 className="font-mono text-[10px] px-2.5 py-1 rounded bg-[#f0f0f0] dark:bg-[#2a2a2c] text-[#111] dark:text-[#f0f0f0]"
                               >
                                 {tech}
@@ -566,8 +566,8 @@ export default function NoahPortfolio() {
 
                       {/* Modal Footer Controls */}
                       <footer className="job-modal-nav border-t border-black/[0.06] dark:border-white/[0.06]">
-                        <button 
-                          className="job-modal-nav-btn" 
+                        <button
+                          className="job-modal-nav-btn"
                           onClick={() => handleModalNav('prev')}
                           disabled={experienceData.findIndex(j => j.id === selectedJob.id) === 0}
                           aria-label="Previous job"
@@ -581,8 +581,8 @@ export default function NoahPortfolio() {
                           Close
                         </button>
 
-                        <button 
-                          className="job-modal-nav-btn" 
+                        <button
+                          className="job-modal-nav-btn"
                           onClick={() => handleModalNav('next')}
                           disabled={experienceData.findIndex(j => j.id === selectedJob.id) === experienceData.length - 1}
                           aria-label="Next job"
@@ -610,11 +610,11 @@ export default function NoahPortfolio() {
               <div className="projects-card-scroll">
                 <div className="flex flex-col gap-3 mt-4">
                   {projectsData.map((project, index) => (
-                    <a 
-                      key={index} 
+                    <a
+                      key={index}
                       href={project.url === '#' ? undefined : project.url}
-                      target={project.url === '#' ? undefined : "_blank"} 
-                      rel="noopener noreferrer" 
+                      target={project.url === '#' ? undefined : "_blank"}
+                      rel="noopener noreferrer"
                       className="proj-card"
                     >
                       {/* Premium aesthetic card mockup gradient placeholder */}
@@ -636,11 +636,11 @@ export default function NoahPortfolio() {
                             {project.desc}
                           </p>
                         </div>
-                        
+
                         <div className="flex flex-wrap gap-1 my-1">
                           {project.tech.slice(0, 4).map((tech, i) => (
-                            <span 
-                              key={i} 
+                            <span
+                              key={i}
                               className="font-mono text-[9px] px-1.5 py-0.5 rounded bg-black/[0.04] dark:bg-white/[0.04] text-[#666] dark:text-[#999] border border-black/[0.05] dark:border-white/[0.05]"
                             >
                               {tech}
@@ -674,11 +674,11 @@ export default function NoahPortfolio() {
               <div className="projects-scroll">
                 <div className="projects-list projects-list--top mt-4">
                   {achievementsData.map((item, index) => (
-                    <a 
-                      key={index} 
+                    <a
+                      key={index}
                       href={item.url === '#' ? undefined : `https://${item.url}`}
-                      target={item.url === '#' ? undefined : "_blank"} 
-                      rel="noopener noreferrer" 
+                      target={item.url === '#' ? undefined : "_blank"}
+                      rel="noopener noreferrer"
                       className="project-row"
                     >
                       <div className="project-row-left">
@@ -686,7 +686,7 @@ export default function NoahPortfolio() {
                           {item.icon}
                         </div>
                       </div>
-                      
+
                       <div className="project-row-body">
                         <div className="project-row-header">
                           <h3 className="project-title font-semibold text-black dark:text-[#f0f0f0]">
@@ -716,9 +716,9 @@ export default function NoahPortfolio() {
       {/* Mobile Page Dots indicators */}
       <div className="page-dots">
         {[0, 1, 2, 3].map((idx) => (
-          <span 
-            key={idx} 
-            className={`page-dot ${idx === activeDot ? 'page-dot--active' : ''}`} 
+          <span
+            key={idx}
+            className={`page-dot ${idx === activeDot ? 'page-dot--active' : ''}`}
           />
         ))}
       </div>

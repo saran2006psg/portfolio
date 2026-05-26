@@ -121,13 +121,27 @@ export default function ScrollyCanvas({ numFrames = 120 }: ScrollyCanvasProps) {
 
     // Handle Resize
     useEffect(() => {
+        let lastWidth = 0;
+
         const handleResize = () => {
             if (canvasRef.current) {
-                canvasRef.current.width = window.innerWidth;
-                canvasRef.current.height = window.innerHeight;
-                // Re-render current frame if possible?
-                // The next scroll event or state update will fix it, 
-                // or we can force redraw but we need accessing the current progress.
+                const currentWidth = window.innerWidth;
+                const currentHeight = window.innerHeight;
+
+                // Only resize backing store on width changes (ignore height changes from mobile address bars)
+                if (currentWidth !== lastWidth || !canvasRef.current.width) {
+                    const dpr = window.devicePixelRatio || 1;
+                    
+                    // Set display size (CSS pixels)
+                    canvasRef.current.style.width = '100%';
+                    canvasRef.current.style.height = '100%';
+                    
+                    // Set backing store size (physical pixels)
+                    canvasRef.current.width = currentWidth * dpr;
+                    canvasRef.current.height = currentHeight * dpr;
+                    
+                    lastWidth = currentWidth;
+                }
             }
         };
 

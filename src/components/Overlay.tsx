@@ -33,11 +33,11 @@ export default function Overlay({ scrollYProgress }: OverlayProps) {
                 style={{ opacity: opacity1, y: y1 }}
                 className="absolute top-[5vh] w-full flex flex-col justify-center items-center h-screen"
             >
-                <div className="text-center space-y-6">
-                    <h1 className="text-7xl md:text-9xl font-display font-light tracking-tight text-white mix-blend-difference">
+                <div className="text-center space-y-4 md:space-y-6 px-4">
+                    <h1 className="text-5xl md:text-9xl font-display font-light tracking-tight text-white mix-blend-difference">
                         SARAN M.
                     </h1>
-                    <p className="text-xl md:text-2xl font-mono text-muted-foreground uppercase tracking-widest">
+                    <p className="text-base md:text-2xl font-mono text-muted-foreground uppercase tracking-widest">
                         Creative Developer
                     </p>
                 </div>
@@ -46,9 +46,9 @@ export default function Overlay({ scrollYProgress }: OverlayProps) {
             {/* Section 2 */}
             <motion.div
                 style={{ opacity: opacity2, y: y2, x: x2 }}
-                className="absolute top-[30%] left-[10%] md:left-[15%] max-w-[80vw] md:max-w-3xl"
+                className="absolute top-[30%] left-[5%] md:left-[15%] max-w-[90vw] md:max-w-3xl"
             >
-                <h2 className="text-5xl md:text-7xl font-display font-light leading-none">
+                <h2 className="text-3xl md:text-7xl font-display font-light leading-tight">
                     I build <span className="text-accent italic">digital experiences</span> that matter.
                 </h2>
             </motion.div>
@@ -56,10 +56,10 @@ export default function Overlay({ scrollYProgress }: OverlayProps) {
             {/* Section 3 */}
             <motion.div
                 style={{ opacity: opacity3, y: y3, x: x3 }}
-                className="absolute top-[60%] right-[10%] md:right-[15%] max-w-[80vw] md:max-w-3xl text-right"
+                className="absolute top-[60%] right-[5%] md:right-[15%] max-w-[90vw] md:max-w-3xl text-right"
             >
-                <h2 className="text-5xl md:text-7xl font-display font-light leading-none">
-                    Bridging <span className="text-teal-400 italic">design</span> and <br /> <span className="font-mono text-4xl md:text-6xl not-italic text-muted-foreground">engineering.</span>
+                <h2 className="text-3xl md:text-7xl font-display font-light leading-tight">
+                    Bridging <span className="text-teal-400 italic">design</span> and <br /> <span className="font-mono text-2xl md:text-6xl not-italic text-muted-foreground">engineering.</span>
                 </h2>
             </motion.div>
 
