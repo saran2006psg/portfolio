@@ -97,8 +97,20 @@ export default function ScrollyCanvas({ numFrames = 120 }: ScrollyCanvasProps) {
         };
 
         // Sub to scroll
+        let autoScrolled = false;
         const unsubscribe = scrollYProgress.on("change", (latest) => {
             requestAnimationFrame(() => render(latest));
+
+            // Auto-scroll to contents directly after the last of scroll
+            if (latest > 0.92 && !autoScrolled) {
+                autoScrolled = true;
+                const portfolio = document.getElementById('portfolio-content');
+                if (portfolio) {
+                    portfolio.scrollIntoView({ behavior: 'smooth' });
+                }
+            } else if (latest < 0.85) {
+                autoScrolled = false;
+            }
         });
 
         // Initial render call

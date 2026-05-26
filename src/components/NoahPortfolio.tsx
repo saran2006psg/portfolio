@@ -253,7 +253,7 @@ export default function NoahPortfolio() {
   };
 
   return (
-    <div className="site">
+    <div id="portfolio-content" className="site">
       {/* Site Header */}
       <header className="site-header border-b border-black/[0.06] dark:border-white/[0.06]">
         <h1 className="site-title font-mono uppercase tracking-widest text-[#111] dark:text-[#f0f0f0] font-semibold">
@@ -599,54 +599,7 @@ export default function NoahPortfolio() {
             </div>
           </div>
 
-          {/* COLUMN 3: Hackathons & Open Source Achievements */}
-          <div className="column">
-            <div className="col-outer card h-full">
-              <div className="card-label">
-                <button className="col-tab" disabled>Achievements & Releases</button>
-              </div>
-
-              {/* Scrollable list matching Noah's Open Source */}
-              <div className="projects-scroll">
-                <div className="projects-list projects-list--top mt-4">
-                  {achievementsData.map((item, index) => (
-                    <a 
-                      key={index} 
-                      href={item.url === '#' ? undefined : `https://${item.url}`}
-                      target={item.url === '#' ? undefined : "_blank"} 
-                      rel="noopener noreferrer" 
-                      className="project-row"
-                    >
-                      <div className="project-row-left">
-                        <div className="project-icon bg-black/[0.03] dark:bg-white/[0.03] border border-black/[0.05] dark:border-white/[0.05] flex items-center justify-center">
-                          {item.icon}
-                        </div>
-                      </div>
-                      
-                      <div className="project-row-body">
-                        <div className="project-row-header">
-                          <h3 className="project-title font-semibold text-black dark:text-[#f0f0f0]">
-                            {item.title}
-                          </h3>
-                          <span className="project-date font-mono">{item.date}</span>
-                        </div>
-                        <p className="project-desc font-sans text-xs text-[#666] dark:text-[#999] leading-relaxed">
-                          {item.desc}
-                        </p>
-                        {item.url !== '#' && (
-                          <p className="project-url font-mono text-[9.5px] text-[#999] tracking-wider mt-1">
-                            {item.url}
-                          </p>
-                        )}
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* COLUMN 4: Featured Projects */}
+          {/* COLUMN 3: Featured Projects */}
           <div className="column">
             <div className="col-outer card h-full">
               <div className="card-label">
@@ -707,6 +660,53 @@ export default function NoahPortfolio() {
                 </div>
               </div>
 
+            </div>
+          </div>
+
+          {/* COLUMN 4: Hackathons & Open Source Achievements */}
+          <div className="column">
+            <div className="col-outer card h-full">
+              <div className="card-label">
+                <button className="col-tab" disabled>Achievements & Releases</button>
+              </div>
+
+              {/* Scrollable list matching Noah's Open Source */}
+              <div className="projects-scroll">
+                <div className="projects-list projects-list--top mt-4">
+                  {achievementsData.map((item, index) => (
+                    <a 
+                      key={index} 
+                      href={item.url === '#' ? undefined : `https://${item.url}`}
+                      target={item.url === '#' ? undefined : "_blank"} 
+                      rel="noopener noreferrer" 
+                      className="project-row"
+                    >
+                      <div className="project-row-left">
+                        <div className="project-icon bg-black/[0.03] dark:bg-white/[0.03] border border-black/[0.05] dark:border-white/[0.05] flex items-center justify-center">
+                          {item.icon}
+                        </div>
+                      </div>
+                      
+                      <div className="project-row-body">
+                        <div className="project-row-header">
+                          <h3 className="project-title font-semibold text-black dark:text-[#f0f0f0]">
+                            {item.title}
+                          </h3>
+                          <span className="project-date font-mono">{item.date}</span>
+                        </div>
+                        <p className="project-desc font-sans text-xs text-[#666] dark:text-[#999] leading-relaxed">
+                          {item.desc}
+                        </p>
+                        {item.url !== '#' && (
+                          <p className="project-url font-mono text-[9.5px] text-[#999] tracking-wider mt-1">
+                            {item.url}
+                          </p>
+                        )}
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
