@@ -48,7 +48,7 @@ export default function Overlay({ scrollYProgress }: OverlayProps) {
                 style={{ opacity: opacity2, y: y2, x: x2 }}
                 className="absolute top-[30%] left-[5%] md:left-[15%] max-w-[90vw] md:max-w-3xl"
             >
-                <h2 className="text-3xl md:text-7xl font-display font-light leading-tight">
+                <h2 className="text-3xl md:text-8xl font-display font-light leading-tight">
                     I build <span className="text-accent italic">digital experiences</span> that matter.
                 </h2>
             </motion.div>
@@ -58,8 +58,8 @@ export default function Overlay({ scrollYProgress }: OverlayProps) {
                 style={{ opacity: opacity3, y: y3, x: x3 }}
                 className="absolute top-[60%] right-[5%] md:right-[15%] max-w-[90vw] md:max-w-3xl text-right"
             >
-                <h2 className="text-3xl md:text-7xl font-display font-light leading-tight">
-                    Bridging <span className="text-teal-400 italic">design</span> and <br /> <span className="font-mono text-2xl md:text-6xl not-italic text-muted-foreground">engineering.</span>
+                <h2 className="text-3xl md:text-8xl font-display font-light leading-tight">
+                    Bridging <span className="text-teal-400 italic">design</span> and <br /> <span className="font-mono text-2xl md:text-7xl not-italic text-muted-foreground">engineering.</span>
                 </h2>
             </motion.div>
 
