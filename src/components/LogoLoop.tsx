@@ -59,7 +59,7 @@ const toCssLength = (value?: number | string) =>
 
 const useResizeObserver = (
   callback: () => void,
-  elements: RefObject<HTMLElement>[],
+  elements: RefObject<HTMLElement | null>[],
   dependencies: DependencyList
 ) => {
   useEffect(() => {
@@ -83,7 +83,7 @@ const useResizeObserver = (
 };
 
 const useImageLoader = (
-  seqRef: RefObject<HTMLElement>,
+  seqRef: RefObject<HTMLElement | null>,
   onLoad: () => void,
   dependencies: DependencyList
 ) => {
@@ -117,7 +117,7 @@ const useImageLoader = (
 };
 
 const useAnimationLoop = (
-  trackRef: RefObject<HTMLDivElement>,
+  trackRef: RefObject<HTMLDivElement | null>,
   targetVelocity: number,
   seqWidth: number,
   seqHeight: number,
