@@ -158,7 +158,7 @@ const achievementsData = [
     )
   },
   {
-    title: "Infinitum Helpdesk Lead",
+    title: "Infinitum Helpdesk",
     date: "2025 - 2026",
     desc: "Developed the official helpdesk management system for Infinitum, streamlining participant registration, kit distribution, payment tracking, and real-time operations.",
     url: "#",
@@ -188,7 +188,7 @@ const projectsData = [
     desc: "Built a RAG pipeline with SentenceTransformers and Pinecone (9,447 clauses) for risk classification across 12 contract types. Fine-tuned RoBERTa on CUAD using LoRA, deployed on Modal with a contract Q&A chatbot analyzing in under 30s.",
     tech: ["FastAPI", "React/Vite", "Pinecone", "LLaMA-3", "LoRA", "Modal"],
     githubUrl: "https://github.com/saran2006psg/ContractRiskAnalyzer",
-    liveUrl: "",
+    liveUrl: "https://contract-risk-analyzer-sepia.vercel.app/",
     gradient: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)"
   },
   {
@@ -206,7 +206,7 @@ const projectsData = [
     desc: "Built a full-stack digital memory journal featuring a vintage-style timeline, Polaroid-style gallery, and mood tracking with secure authentication, row-level data protection, and Cloudinary media uploads.",
     tech: ["Next.js", "TypeScript", "Supabase", "Cloudinary", "Vercel", "Render"],
     githubUrl: "https://github.com/saran2006psg/relive-digital-memory-journal",
-    liveUrl: "",
+    liveUrl: "https://relive-digital-memory-journal.vercel.app/",
     gradient: "linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)"
   },
   {
@@ -420,14 +420,14 @@ export default function NoahPortfolio() {
                       <div>
                         <strong className="text-xs font-semibold">PSG College of Technology</strong>
                         <div className="text-[11px] text-muted-foreground leading-normal mt-0.5">
-                          B.E. Computer Science (AIML) • CGPA: 8.59<br/>
+                          B.E. Computer Science (AIML) • CGPA: 8.59<br />
                           Expected 2027 • Coimbatore, India
                         </div>
                       </div>
                       <div className="border-t border-black/[0.03] dark:border-white/[0.03] pt-1">
                         <strong className="text-xs font-semibold">Nachimuthu Polytechnic College</strong>
                         <div className="text-[11px] text-muted-foreground leading-normal mt-0.5">
-                          Diploma in Electrical & Electronics Engg. • CGPA: 9.73<br/>
+                          Diploma in Electrical & Electronics Engg. • CGPA: 9.73<br />
                           2021 – 2024 • Tamil Nadu, India
                         </div>
                       </div>
