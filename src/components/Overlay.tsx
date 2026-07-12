@@ -27,7 +27,7 @@ export default function Overlay({ scrollYProgress }: OverlayProps) {
     const y4 = useTransform(scrollYProgress, [0.72, 0.80, 0.95, 0.98], [40, 0, 0, -40]);
 
     return (
-        <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 text-foreground font-sans">
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 text-foreground font-body">
             {/* Section 1 */}
             <motion.div
                 style={{ opacity: opacity1, y: y1 }}
@@ -38,7 +38,7 @@ export default function Overlay({ scrollYProgress }: OverlayProps) {
                         SARAN M.
                     </h1>
                     <p className="text-base md:text-2xl font-mono text-muted-foreground uppercase tracking-widest">
-                        Creative Developer
+                        AI Engineer &amp; Full-Stack Developer
                     </p>
                 </div>
             </motion.div>
@@ -46,20 +46,20 @@ export default function Overlay({ scrollYProgress }: OverlayProps) {
             {/* Section 2 */}
             <motion.div
                 style={{ opacity: opacity2, y: y2, x: x2 }}
-                className="absolute top-[30%] left-[5%] md:left-[15%] max-w-[90vw] md:max-w-3xl"
+                className="absolute top-[30%] left-[5%] md:left-[15%] max-w-[90vw] md:max-w-4xl"
             >
-                <h2 className="text-3xl md:text-8xl font-display font-light leading-tight">
-                    I build <span className="text-accent italic">digital experiences</span> that matter.
+                <h2 className="text-3xl md:text-7xl lg:text-8xl font-display font-light leading-tight">
+                    Crafting <span className="text-accent italic">intelligent solutions</span> at the intersection of AI &amp; code.
                 </h2>
             </motion.div>
 
             {/* Section 3 */}
             <motion.div
                 style={{ opacity: opacity3, y: y3, x: x3 }}
-                className="absolute top-[60%] right-[5%] md:right-[15%] max-w-[90vw] md:max-w-3xl text-right"
+                className="absolute top-[60%] right-[5%] md:right-[15%] max-w-[90vw] md:max-w-4xl text-right"
             >
-                <h2 className="text-3xl md:text-8xl font-display font-light leading-tight">
-                    Bridging <span className="text-teal-400 italic">design</span> and <br /> <span className="font-mono text-2xl md:text-7xl not-italic text-muted-foreground">engineering.</span>
+                <h2 className="text-3xl md:text-7xl lg:text-8xl font-display font-light leading-tight">
+                    Bridging the gap between <span className="text-teal-400 italic">neural reasoning</span> and <br /> <span className="font-mono text-2xl md:text-5xl lg:text-7xl not-italic text-muted-foreground">production systems.</span>
                 </h2>
             </motion.div>
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from './ThemeProvider';
 
@@ -8,56 +8,52 @@ import { useTheme } from './ThemeProvider';
 const experienceData = [
   {
     id: 1,
-    company: "ETHER-X Hackathon",
-    role: "AI Engineer",
-    roleSubtitle: "AI-Based Web Application Firewall",
-    duration: "2026 • Hackathon Project",
-    type: "1st Prize Winner 🏆",
-    description: "Built an AI-powered Web Application Firewall using DistilBERT to detect malicious HTTP requests and cyber attacks.",
-    techStack: ["Python", "DistilBERT", "Transformers", "Machine Learning", "Cybersecurity"],
+    company: "DossierNexus",
+    role: "Software Development Engineer Intern",
+    roleSubtitle: "Backend & AI Analytics Copilot",
+    duration: "May 2026 – July 2026 • Remote",
+    type: "Internship",
+    description: "Built scalable backend services, engineered real-time analytics platforms, and developed an AI-powered Analytics Copilot using Claude AI and LLMs.",
+    techStack: ["Node.js", "Express.js", "PostgreSQL", "Sequelize", "React", "Claude AI", "SSE", "WebSockets"],
     achievements: [
-      "Built a transformer-based HTTP anomaly detection system.",
-      "Used Masked Language Modeling (MLM) for threat detection.",
-      "Detected SQL injection, XSS, and command injection attacks.",
-      "Developed real-time request monitoring and scoring pipelines.",
-      "Trained and tested the model using HTTP traffic datasets.",
-      "Won 1st Prize in the ETHER-X Hackathon."
+      "Built scalable backend services and full-stack features using Node.js, Express.js, PostgreSQL, Sequelize, and React, designing production-ready REST APIs with a clean, layered architecture.",
+      "Engineered a real-time analytics platform by designing pre-aggregated PostgreSQL schemas and event-driven data pipelines using Server-Sent Events (SSE) and WebSockets for low-latency dashboards.",
+      "Developed an AI-powered Analytics Copilot using Claude AI and LLMs, implementing SQL generation, visualization, and business insights through prompt engineering and metadata-driven schema mapping."
     ],
     learnings: [
-      "Applying transformer models directly to network packets/HTTP request text streams is incredibly fast and powerful.",
-      "MLM allows the firewall to generalize threats better than classic signatures or regex rules.",
-      "Deploying ML pipelines to real-time network streams requires high-throughput data processing to avoid latency issues."
+      "Layered, clean architecture in Node/Express ensures maintainability and scalability when expanding API surfaces.",
+      "Pre-aggregating database schemas and streaming real-time updates via SSE/WebSockets significantly reduces query load and dashboard latency.",
+      "Leveraging LLMs for natural language to SQL translation requires robust prompt engineering and exact schema mapping metadata to guarantee query safety."
     ],
     top: 0,
     height: 160,
     left: "calc(0% + 0px)",
     width: "calc(50% - 3px)",
-    logo: "/sequence/frame_000.png" // fallback/logo indicator
+    logo: "/sequence/frame_000.png"
   },
   {
     id: 2,
-    company: "Unbound Hackathon",
-    role: "Full Stack Developer",
-    roleSubtitle: "Command Gateway System",
-    duration: "2025 • Remote",
-    type: "Hackathon",
-    description: "Built a secure command management platform with role-based access, validation rules, and admin approval workflows.",
-    techStack: ["Python FastAPI", "React.js", "Supabase", "REST APIs", "Vite"],
+    company: "ETHER-X Hackathon",
+    role: "AI Engineer",
+    roleSubtitle: "AI-Based Web Application Firewall",
+    duration: "Feb 2026 • Hackathon Project",
+    type: "1st Prize Winner 🏆",
+    description: "Built an AI-powered Web Application Firewall using DistilBERT to detect malicious HTTP requests and cyber attacks.",
+    techStack: ["Python", "DistilBERT", "Transformers", "Machine Learning", "Cybersecurity"],
     achievements: [
-      "Built a full-stack command validation platform.",
-      "Implemented API key authentication and role-based access control.",
-      "Created regex-based command validation rules.",
-      "Developed admin approval and voting workflows.",
-      "Added audit logs and command history tracking.",
-      "Deployed the project using Vercel and Render."
+      "Secured First Prize at ETHER-X Hackathon 2026 for building a Transformer-based Web Application Firewall using DistilBERT to detect SQL injection, XSS, and other attacks in real-time HTTP traffic.",
+      "Built a transformer-based HTTP anomaly detection system.",
+      "Used Masked Language Modeling (MLM) for threat detection.",
+      "Detected SQL injection, XSS, and command injection attacks.",
+      "Developed real-time request monitoring and scoring pipelines."
     ],
     learnings: [
-      "Designing workflows that involve human-in-the-loop validation requires strict role isolation and database integrity.",
-      "FastAPI simplifies validation schemas via Pydantic immensely.",
-      "Supabase real-time handles simple notification systems without setting up a heavy broker."
+      "Applying transformer models directly to HTTP request text streams is incredibly fast and powerful.",
+      "MLM allows the firewall to generalize threats better than classic signatures or regex rules.",
+      "Deploying ML pipelines to real-time network streams requires high-throughput data processing to avoid latency issues."
     ],
-    top: 140,
-    height: 180,
+    top: 0,
+    height: 160,
     left: "calc(50% + 3px)",
     width: "calc(50% - 3px)",
     logo: "/sequence/frame_040.png"
@@ -67,20 +63,16 @@ const experienceData = [
     company: "ReLive",
     role: "Full Stack Developer",
     roleSubtitle: "Digital Memory Journal",
-    duration: "2025 • Remote",
+    duration: "Oct 2025 • Remote",
     type: "Project",
     description: "Developed a digital journaling platform where users can save memories using photos, audio, and stories.",
-    techStack: ["Next.js", "TypeScript", "Supabase", "Cloudinary", "Tailwind CSS"],
+    techStack: ["Next.js", "TypeScript", "Supabase", "Cloudinary", "Tailwind CSS", "Vercel", "Render"],
     achievements: [
-      "Built timeline and gallery-based memory views.",
-      "Implemented secure authentication using Supabase.",
-      "Added support for image and audio uploads.",
-      "Developed mood tracking and memory reminder features.",
-      "Integrated Cloudinary for media storage.",
-      "Improved frontend performance and responsiveness."
+      "Built a full-stack digital memory journal featuring a vintage-style timeline, Polaroid-style gallery, and mood tracking with secure authentication and row-level data protection.",
+      "Implemented rich media uploads for photos and audio with optimized cloud storage, tag-based organization, location tracking, and an 'On This Day' feature to resurface past memories."
     ],
     learnings: [
-      "Integrating multi-media storage (audio + video) requires handling slow uploads with smooth UI loading and optimistic states.",
+      "Integrating multi-media storage requires handling slow uploads with smooth UI loading and optimistic states.",
       "Handling media securely means setting fine-grained security policies on storage buckets.",
       "Creating intuitive journaling logs requires robust local storage caching and state sync."
     ],
@@ -92,29 +84,52 @@ const experienceData = [
   },
   {
     id: 4,
-    company: "Capture The Flag Platform",
-    role: "Backend Developer",
-    duration: "2024 • Remote",
+    company: "AgriConnect",
+    role: "Full Stack Developer",
+    roleSubtitle: "Agricultural Marketplace",
+    duration: "July 2025 • Project",
     type: "Project",
-    description: "Worked on the backend development of a CTF cybersecurity platform with authentication, challenge management, and real-time score updates.",
-    techStack: ["Node.js", "Express.js", "MongoDB", "JWT", "WebSockets"],
+    description: "Built a full-stack agricultural marketplace platform connecting farmers and consumers directly.",
+    techStack: ["React 19", "TypeScript", "Express.js", "Supabase", "PostgreSQL", "Tailwind CSS"],
     achievements: [
-      "Developed authentication and middleware systems.",
-      "Implemented JWT-based role authorization.",
-      "Built APIs for challenges and categories.",
-      "Worked on real-time leaderboard updates using WebSockets.",
-      "Collaborated with team members using GitHub workflows."
+      "Built a full-stack agricultural marketplace connecting farmers and consumers directly, implementing JWT + Google OAuth authentication, role-based access control, and scalable REST APIs.",
+      "Designed a Supabase PostgreSQL relational database with digital wallet tracking, order lifecycle automation using Node-cron, and interactive React dashboards for analytics and sales."
     ],
     learnings: [
-      "Using WebSockets at scale requires thinking about connection heartbeats and reconnection states to prevent memory leaks.",
-      "Backend route middleware is critical for preventing horizontal privilege escalation in CTFs.",
-      "Clean Git branch merging is key in collaborative backend projects with high file overlap."
+      "Designing robust database schemas with proper foreign keys and triggers is critical for complex transactional platforms.",
+      "Integrating Google OAuth alongside local JWT authentication requires clean routing and token validation pipelines.",
+      "Cron jobs running in the background are perfect for order lifecycle management and pending balance settlements."
+    ],
+    top: 180,
+    height: 190,
+    left: "calc(50% + 3px)",
+    width: "calc(50% - 3px)",
+    logo: "/sequence/frame_100.png"
+  },
+  {
+    id: 5,
+    company: "CREATE 2024",
+    role: "Embedded & ML Developer",
+    roleSubtitle: "Smart Sign Glove",
+    duration: "Dec 2024 • National Competition",
+    type: "1st Prize Winner 🏆",
+    description: "Developed an IoT gesture recognition glove combining Arduino, sensors, and machine learning to translate sign language gestures in real-time.",
+    techStack: ["Arduino", "Embedded C", "8051", "Sensors", "Machine Learning"],
+    achievements: [
+      "Secured First Prize in the 3rd National Level Technical Project Competition-cum-Conference CREATE 2024 for the project 'Smart Sign Glove for Disabled People'.",
+      "Developed hardware integration using Arduino, 8051, accelerometers, gyroscopes, and flex sensors.",
+      "Built a real-time gesture recognition machine learning pipeline to translate sign gestures to text/speech."
+    ],
+    learnings: [
+      "Combining hardware sensors with software ML requires filtering out raw signal noise using moving average filters.",
+      "Low-power microcontrollers (8051) have constrained memory, requiring optimized memory usage in C code.",
+      "Collaborating with non-technical users to calibrate gestures is essential for system accuracy and usability."
     ],
     top: 390,
-    height: 160,
+    height: 170,
     left: "0",
     width: "100%",
-    logo: "/sequence/frame_100.png"
+    logo: "/sequence/frame_119.png"
   }
 ];
 
@@ -122,44 +137,45 @@ const achievementsData = [
   {
     title: "1st Prize - ETHER-X Hackathon",
     date: "Feb 2026",
-    desc: "Built a transformer-based HTTP anomaly detection firewall using DistilBERT. Crowned 1st among competitive cybersecurity projects.",
-    url: "github.com/saran2006psg",
+    desc: "Secured First Prize at ETHER-X Hackathon 2026 for building a Transformer-based Web Application Firewall using DistilBERT to detect SQL injection, XSS, and other attacks in real-time HTTP traffic.",
+    url: "https://github.com/saran2006psg",
     icon: (
       <svg className="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.504-1.125-1.125-1.125h-6.75a1.125 1.125 0 00-1.125 1.125v3.375m9 0h-9M9 10.5h.008v.008H9V10.5zm.75 0h.008v.008H9.75V10.5z" />
-      </svg>
-    )
-  },
-  {
-    title: "First Prize - CREATE 2024 National Competition",
-    date: "Dec 2024",
-    desc: "Received First Prize at CREATE 2024 National Competition organized by IIC/AICTE. Developed a Smart Sign Glove with IoT sensors and real-time gesture recognition ML to assist disabled people.",
-    url: "#",
-    icon: (
-      <svg className="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
       </svg>
     )
   },
   {
-    title: "1st Prize - Unbound Hackathon Gateway",
-    date: "July 2025",
-    desc: "Built a secure CLI command validation gateway with role approval flows, validation logic rules, and real-time logs in 36 hours.",
-    url: "github.com/saran2006psg",
+    title: "First Prize - CREATE 2024",
+    date: "Dec 2024",
+    desc: "Secured First Prize in the 3rd National Level Technical Project Competition CREATE 2024 for developing a Smart Sign Glove with IoT sensors and real-time gesture recognition ML.",
+    url: "#",
     icon: (
-      <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+      <svg className="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 006 18h6z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 2.25V4.5m0 15v2.25M4.5 12H2.25m19.5 0h-2.25m-14.85-6.364l1.591 1.591m11.314 11.314l1.591 1.591m-1.591-11.314l-1.591 1.591m-11.314 11.314l-1.591 1.591" />
       </svg>
     )
   },
   {
-    title: "ReLive – Digital Memory Journal Release",
-    date: "Oct 2025",
-    desc: "Shipped Next.js full-stack memory journaling system. Enabled cloud audio, mood analysis logs, and responsive timeline views.",
-    url: "github.com/saran2006psg",
+    title: "Infinitum Helpdesk Lead",
+    date: "2025 - 2026",
+    desc: "Developed the official helpdesk management system for Infinitum, streamlining participant registration, kit distribution, payment tracking, and real-time operations.",
+    url: "#",
+    icon: (
+      <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.109A11.386 11.386 0 0110.089 21c-2.902 0-5.54-1.088-7.54-2.881M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    )
+  },
+  {
+    title: "CodeNvibe Developer",
+    date: "2024 - 2025",
+    desc: "Built responsive frontend and admin interfaces, collaborating with cross-functional teams to deliver production-ready user experiences.",
+    url: "#",
     icon: (
       <svg className="w-6 h-6 text-green-500" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25M19.5 3H4.5A1.5 1.5 0 003 4.5v10.5A1.5 1.5 0 004.5 16h15a1.5 1.5 0 001.5-1.5V4.5A1.5 1.5 0 0019.5 3z" />
       </svg>
     )
   }
@@ -167,35 +183,39 @@ const achievementsData = [
 
 const projectsData = [
   {
-    title: "Legal Contract Risk Analyzer",
+    title: "AI Contract Risk Scanner",
     category: "AI & Machine Learning",
-    desc: "End-to-end AI system for automated legal contract risk assessment using semantic retrieval and LLM reasoning. High speed and robust PDF ingestions.",
-    tech: ["Python", "Groq", "SentenceTransformers", "Pinecone", "PyMuPDF"],
-    url: "https://github.com/saran2006psg",
+    desc: "Built a RAG pipeline with SentenceTransformers and Pinecone (9,447 clauses) for risk classification across 12 contract types. Fine-tuned RoBERTa on CUAD using LoRA, deployed on Modal with a contract Q&A chatbot analyzing in under 30s.",
+    tech: ["FastAPI", "React/Vite", "Pinecone", "LLaMA-3", "LoRA", "Modal"],
+    githubUrl: "https://github.com/saran2006psg/ContractRiskAnalyzer",
+    liveUrl: "",
     gradient: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)"
   },
   {
     title: "AgriConnect",
     category: "Full Stack Marketplace",
-    desc: "Agricultural marketplace platform connecting farmers and consumers directly with role-based access, farmer wallets, and analytical dashboard.",
-    tech: ["React", "FastAPI", "Supabase", "PostgreSQL", "TailwindCSS"],
-    url: "https://github.com/saran2006psg/aggriconnect/tree/mainv",
+    desc: "Built a full-stack agricultural marketplace connecting farmers and consumers directly, implementing JWT + Google OAuth authentication, role-based access control, wallet tracking, and cron order lifecycle automation.",
+    tech: ["React 19", "TypeScript", "Express.js", "Supabase", "PostgreSQL", "Tailwind CSS"],
+    githubUrl: "https://github.com/saran2006psg/aggriconnect",
+    liveUrl: "https://aggriconnect.vercel.app",
     gradient: "linear-gradient(135deg, #052e16 0%, #14532d 100%)"
   },
   {
     title: "ReLive – Digital Memory Journal",
     category: "Full Stack Web",
-    desc: "Full-stack memory journal with mood logs, image/audio uploads, Cloudinary integration, and highly interactive gallery timelines.",
-    tech: ["Next.js", "TypeScript", "Supabase", "Cloudinary", "Tailwind"],
-    url: "https://github.com/saran2006psg",
+    desc: "Built a full-stack digital memory journal featuring a vintage-style timeline, Polaroid-style gallery, and mood tracking with secure authentication, row-level data protection, and Cloudinary media uploads.",
+    tech: ["Next.js", "TypeScript", "Supabase", "Cloudinary", "Vercel", "Render"],
+    githubUrl: "https://github.com/saran2006psg/relive-digital-memory-journal",
+    liveUrl: "",
     gradient: "linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)"
   },
   {
     title: "Smart Sign Glove for Disabled",
     category: "Embedded Systems & IoT",
-    desc: "Award-winning gesture recognition system combining IoT sensors with machine learning to translate sign language gestures in real-time.",
-    tech: ["Arduino", "Embedded C", "ML", "Accelerometers", "Gyros"],
-    url: "#",
+    desc: "First Prize-winning gesture recognition system combining IoT sensors (flex sensors, accelerometers, gyroscopes) with machine learning to translate sign language gestures in real-time.",
+    tech: ["Arduino", "Embedded C", "8051", "Sensors", "Machine Learning"],
+    githubUrl: "",
+    liveUrl: "",
     gradient: "linear-gradient(135deg, #3b0764 0%, #581c87 100%)"
   }
 ];
@@ -246,7 +266,7 @@ export default function NoahPortfolio() {
   const handleModalNav = (direction: 'prev' | 'next') => {
     if (!selectedJob) return;
     const currentIndex = experienceData.findIndex(j => j.id === selectedJob.id);
-    let newIndex = direction === 'prev' ? currentIndex - 1 : currentIndex + 1;
+    const newIndex = direction === 'prev' ? currentIndex - 1 : currentIndex + 1;
     if (newIndex >= 0 && newIndex < experienceData.length) {
       setSelectedJob(experienceData[newIndex]);
     }
@@ -340,13 +360,13 @@ export default function NoahPortfolio() {
                   </div>
 
                   <h2 className="bio-heading text-black dark:text-[#f0f0f0]">
-                    Hey, I'm Saran. A Computer Science Student & Developer.
+                    Hey, I&apos;m Saran. A Computer Science (AIML) Student & AI Developer.
                   </h2>
                   <p className="bio-para">
-                    I have a strong foundation in software engineering, with a keen interest in mobile application development (Flutter) and embedded systems. I love combining sensors and hardware with modern web frameworks to build production-grade, real-world solutions.
+                    I am deeply passionate about Artificial Intelligence and Machine Learning. I specialize in building intelligent, production-grade applications that combine advanced AI models (like LLMs, SLMs, and Transformers) with robust full-stack architectures. I always love building projects and constantly exploring the frontiers of AI.
                   </p>
                   <p className="bio-para">
-                    Currently studying Computer Science and Engineering, I actively participate in national hackathons and enjoy designing robust backend architectures, validation frameworks, and deep-learning threat detections.
+                    Currently pursuing my Bachelor&apos;s in Computer Science (AIML), my experience ranges from developing RAG pipelines and fine-tuning legal models to building secure backend services and real-time data streaming architectures. I love exploring new AI technologies and implementing them in hackathons and real-world projects.
                   </p>
 
                   {/* Social Buttons Row */}
@@ -388,23 +408,40 @@ export default function NoahPortfolio() {
                 <div className="about-meta border-t border-black/[0.06] dark:border-white/[0.06]">
                   <div className="meta-row">
                     <span className="meta-label">Role</span>
-                    <span className="meta-val">CS Student & Full-Stack Developer</span>
+                    <span className="meta-val">CS Student (AIML) & Full-Stack Developer</span>
                   </div>
                   <div className="meta-row">
                     <span className="meta-label">Focus</span>
-                    <span className="meta-val">Backend, AI ,RAG, System Design</span>
+                    <span className="meta-val">AI/ML, RAG pipelines, SLM Fine-tuning, Backend APIs</span>
                   </div>
                   <div className="meta-row">
-                    <span className="meta-label">Stack</span>
-                    <span className="meta-val font-mono text-[11px] leading-relaxed">
-                      Python, TypeScript,JavaScript, React, Next.js, FastAPI, Node, Supabase, PostgreSQL,Express
-                    </span>
+                    <span className="meta-label">Education</span>
+                    <div className="meta-val flex flex-col gap-1.5">
+                      <div>
+                        <strong className="text-xs font-semibold">PSG College of Technology</strong>
+                        <div className="text-[11px] text-muted-foreground leading-normal mt-0.5">
+                          B.E. Computer Science (AIML) • CGPA: 8.59<br/>
+                          Expected 2027 • Coimbatore, India
+                        </div>
+                      </div>
+                      <div className="border-t border-black/[0.03] dark:border-white/[0.03] pt-1">
+                        <strong className="text-xs font-semibold">Nachimuthu Polytechnic College</strong>
+                        <div className="text-[11px] text-muted-foreground leading-normal mt-0.5">
+                          Diploma in Electrical & Electronics Engg. • CGPA: 9.73<br/>
+                          2021 – 2024 • Tamil Nadu, India
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div className="meta-row">
-                    <span className="meta-label">Achievements</span>
-                    <span className="meta-val">
-                      Winner of ETHER-X 2026 & CREATE 2024 National Comp.
-                    </span>
+                    <span className="meta-label font-mono">Skills</span>
+                    <div className="meta-val text-xs space-y-1">
+                      <div><strong>Languages:</strong> Python, JavaScript, TypeScript</div>
+                      <div><strong>Frameworks/Tech:</strong> Node.js, Express.js, React, Next.js, FastAPI, Docker, Git</div>
+                      <div><strong>Databases:</strong> PostgreSQL, SQL, Supabase</div>
+                      <div><strong>Hardware (Basics):</strong> Arduino, 8051, Sensors</div>
+                      <div><strong>Soft Skills:</strong> Problem-Solving, Teamwork, Leadership</div>
+                    </div>
                   </div>
                   <div className="meta-row">
                     <span className="meta-label">Location</span>
@@ -610,11 +647,8 @@ export default function NoahPortfolio() {
               <div className="projects-card-scroll">
                 <div className="flex flex-col gap-3 mt-4">
                   {projectsData.map((project, index) => (
-                    <a
+                    <div
                       key={index}
-                      href={project.url === '#' ? undefined : project.url}
-                      target={project.url === '#' ? undefined : "_blank"}
-                      rel="noopener noreferrer"
                       className="proj-card"
                     >
                       {/* Premium aesthetic card mockup gradient placeholder */}
@@ -648,14 +682,38 @@ export default function NoahPortfolio() {
                           ))}
                         </div>
 
-                        <div className="proj-card-meta">
-                          <span className="proj-card-url text-[9px] font-mono tracking-widest text-[#999]">
-                            {project.url === '#' ? "COMPLETED" : "GITHUB REPO"}
-                          </span>
+                        <div className="proj-card-meta flex justify-between items-center mt-2 border-t border-black/[0.06] dark:border-white/[0.06] pt-2">
+                          <div className="flex gap-3">
+                            {project.githubUrl && (
+                              <a
+                                href={project.githubUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-[10.5px] font-mono font-semibold tracking-wider text-accent hover:text-black dark:hover:text-white transition-colors"
+                              >
+                                GITHUB
+                              </a>
+                            )}
+                            {project.liveUrl && (
+                              <a
+                                href={project.liveUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-[10.5px] font-mono font-semibold tracking-wider text-emerald-500 hover:text-black dark:hover:text-white transition-colors"
+                              >
+                                LIVE DEMO
+                              </a>
+                            )}
+                            {!project.githubUrl && !project.liveUrl && (
+                              <span className="text-[10.5px] font-mono font-semibold tracking-wider text-[#999]">
+                                COMPLETED
+                              </span>
+                            )}
+                          </div>
                           <span className="proj-card-arrow">↗</span>
                         </div>
                       </div>
-                    </a>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -676,7 +734,7 @@ export default function NoahPortfolio() {
                   {achievementsData.map((item, index) => (
                     <a
                       key={index}
-                      href={item.url === '#' ? undefined : `https://${item.url}`}
+                      href={item.url === '#' ? undefined : item.url}
                       target={item.url === '#' ? undefined : "_blank"}
                       rel="noopener noreferrer"
                       className="project-row"
@@ -699,7 +757,7 @@ export default function NoahPortfolio() {
                         </p>
                         {item.url !== '#' && (
                           <p className="project-url font-mono text-[9.5px] text-[#999] tracking-wider mt-1">
-                            {item.url}
+                            {item.url.replace("https://", "")}
                           </p>
                         )}
                       </div>
